@@ -23,7 +23,7 @@
        end
 
        def translate( key )
-         I18n.translate "enumerations.#{name.underscore}.#{key}", :raise => true
+         ActionView::Base.new.translate "enumerations.#{name.underscore}.#{key}", :raise => true
        rescue I18n::MissingTranslationData
          nil
        end
